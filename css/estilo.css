@@ -1,0 +1,226 @@
+*{
+    font-family: arial;
+}
+body{
+    background-color: #FFF;
+}
+/*  Header  */
+header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+        
+}
+
+header li {
+    float: left;
+}
+header nav ul li a.selected {background-color:#F00}
+
+header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+header li a:hover {
+    background-color: #111;
+}
+header nav{
+        display: block;
+    width: 100%;
+    position: fixed;
+    z-index: 9999999;
+}
+    #icone_menu,
+    .fechar_menu{
+        display: none;
+    }
+.principal ul li{
+    margin-left: 15px;
+}
+.menuTopo{
+    display: none;
+}
+.menuTopo a{
+    font-size: 21px;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Pacifico', cursive;
+}
+
+#icone_menu,
+.fechar_menu{
+    float: right;
+    margin-right: 40px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url('../img/men_icons.png') no-repeat;
+}
+
+#icone_menu{
+    background-position: 0 0;
+}
+.fechar_menu{
+    background-position: -41px 0!important;
+}
+
+/*  Principal  */
+.principal{
+    width: 100%;
+    height: 100%;
+    padding-left: 300px;
+    padding-right: 50px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 55;
+    clear: both;
+    top: 50px;
+    line-height: 27px;
+}
+.principal h1{
+    font-size: 2em;
+    text-transform: uppercase;
+    line-height: 45px;
+    letter-spacing: -2px;
+    font-weight: normal;
+}
+.principal p{
+}
+.principal h6{
+    line-height: 15px;
+    padding: 15px 0 2px 0px;
+}
+/*  Responsivo  */
+@media (max-width:1099px){
+
+.menuTopo{
+    width: 100%;
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    padding: 15px 60px 15px;
+    background-image: url(../img/unabg3_lay15.png);
+    background-color: #00277a;
+    background-position: 60% 22%;
+}
+
+
+    #check {
+    display: none;
+}
+#check:checked ~ .menuTopo {
+    display: none;
+}
+#check:checked ~ .bg {
+    display: block;
+}
+#check:checked ~ .principal{
+    filter: blur(2px);
+}
+#check:checked ~ header {
+    display: block;
+}
+.principal{
+    top: 75px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.icone p{
+    font-size:12px;
+}
+.icone {    
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
+    position: fixed;
+    z-index: 99999;
+    top: 8px;
+    left: 9px;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    left: 0;
+    top: 0;
+    position: fixed;
+    display: none;
+    z-index: 99;
+}
+    .principal{
+        width: 100%;
+        position: relative;
+    }
+    #map{
+        margin: 0!important;
+    }
+}
+
+
+
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+  'header header header header header header' 
+  'left left middle middle right right' 
+  'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+} 
+
+.left,
+.middle,
+.right {
+  border-bottom: 1px solid #eaeaea;
+  padding: 20px 0 20px 0;
+  width: 75%;
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 940px) {
+
+.left,
+.middle,
+.right {
+  width: 100%;
+}
+  .grid-container  {
+    grid-template-areas: 
+    'header header header header header header' 
+    'left left left left left left' 
+    'middle middle middle middle middle middle' 
+    'right right right right right right' 
+    'footer footer footer footer footer footer';
+}
